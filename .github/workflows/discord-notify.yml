@@ -1,0 +1,80 @@
+name: Discord Notifications
+
+on:
+  push:
+  pull_request:
+  issues:
+  release:
+  create:
+  delete:
+  fork:
+  watch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Discord notification
+        env:
+          DISCORD_WEBHOOK: "https://discord.com/api/webhooks/1259597370014830593/Et-f9-kMZ8KMURQKz88Ux40iPsGnV700-aUIlxPuVY3SzEoqZMQALEQB2ZDgSt6fOnH_"
+        run: |
+          EVENT="${{ github.event_name }}"
+          REPO="${{ github.repository }}"
+          REPO_SHORT="${REPO##*/}"
+          ACTOR="${{ github.actor }}"
+          REF="${{ github.ref }}"
+          BRANCH="${REF##refs/heads/}"
+          SHA="${{ github.sha }}"
+          SHORT_SHA="${SHA:0:7}"
+
+          case $EVENT in
+            push)
+              COMMIT_MSG=$(echo "${{ github.event.head_commit.message }}" | head -1)
+              MSG="📦 **${REPO_SHORT}** · \`${BRANCH}\`\n\`${SHORT_SHA}\` ${COMMIT_MSG}\n— ${ACTOR}"
+              ;;
+            pull_request)
+              ACTION="${{ github.event.action }}"
+              PR_TITLE="${{ github.event.pull_request.title }}"
+              PR_URL="${{ github.event.pull_request.html_url }}"
+              MSG="🔀 **${REPO_SHORT}** · PR ${ACTION}\n[${PR_TITLE}](${PR_URL})\n— ${ACTOR}"
+              ;;
+            issues)
+              ACTION="${{ github.event.action }}"
+              ISSUE_TITLE="${{ github.event.issue.title }}"
+              ISSUE_URL="${{ github.event.issue.html_url }}"
+              MSG="🐛 **${REPO_SHORT}** · issue ${ACTION}\n[${ISSUE_TITLE}](${ISSUE_URL})\n— ${ACTOR}"
+              ;;
+            release)
+              TAG="${{ github.event.release.tag_name }}"
+              REL_URL="${{ github.event.release.html_url }}"
+              MSG="🚀 **${REPO_SHORT}** · released [${TAG}](${REL_URL})\n— ${ACTOR}"
+              ;;
+            watch)
+              MSG="⭐ **${REPO_SHORT}** got a star from ${ACTOR}"
+              ;;
+            fork)
+              FORK_URL="${{ github.event.forkee.html_url }}"
+              MSG="🍴 **${REPO_SHORT}** was forked by ${ACTOR}"
+              ;;
+            create)
+              REF_TYPE="${{ github.event.ref_type }}"
+              REF_NAME="${{ github.event.ref }}"
+              MSG="🌿 **${REPO_SHORT}** · new ${REF_TYPE} \`${REF_NAME}\`\n— ${ACTOR}"
+              ;;
+            delete)
+              REF_TYPE="${{ github.event.ref_type }}"
+              REF_NAME="${{ github.event.ref }}"
+              MSG="🗑️ **${REPO_SHORT}** · deleted ${REF_TYPE} \`${REF_NAME}\`\n— ${ACTOR}"
+              ;;
+            *)
+              MSG="⚡ **${REPO_SHORT}** · ${EVENT} by ${ACTOR}"
+              ;;
+          esac
+
+          curl -s -X POST "$DISCORD_WEBHOOK" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"username\": \"foxbot\",
+              \"avatar_url\": \"https://avatars.githubusercontent.com/u/taynotfound\",
+              \"content\": \"$(echo "$MSG" | sed 's/"/\\"/g')\"
+            }"
