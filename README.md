@@ -15,7 +15,7 @@ i secure and manage infrastructure by day, and self-host everything i can get my
 hobbyist full-stack dev, professional breaker-of-things-on-purpose.
 my homelab isn't a side project - it's infrastructure. it runs my life.
 
-fox on the internet, anarchist in the streets, typescript in the terminal.
+tay on the internet, anarchist in the streets, bullshit in the terminal.
 
 software should be free (as in freedom). i don't monetize my code and i don't respect
 tools gated behind paywalls. privacy is a right. federation is a goal. self-hosting is the answer.
