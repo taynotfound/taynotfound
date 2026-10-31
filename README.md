@@ -1,59 +1,57 @@
-```
-  /\_/\
- ( ^ω^ )  tay märz // taynotfound
-  > 🦊 <   they/them · göttingen, de
-```
+<a href="https://tay-maerz.vercel.app"><img src="https://tay-maerz.vercel.app/og.png" alt="tay.märz: Neun Leben für deine Technik" width="100%"></a>
 
-[![pronouns: they/them](https://img.shields.io/badge/pronouns-they%2Fthem-7b4fff?style=flat-square)](https://pronouns.cc)
-[![antifascist](https://img.shields.io/badge/antifascist-always-e63946?style=flat-square)]()
-[![self-hosted](https://img.shields.io/badge/self--hosted-everything-f97316?style=flat-square)]()
-[![discord: notfound.sh](https://img.shields.io/badge/discord-notfound.sh-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg)
+### Hi, I'm Tay (they/them) 👋
 
----
+Sysadmin and developer from **Göttingen, Germany**. I run **[tay.märz](https://tay-maerz.vercel.app)**: IT help, websites, apps and servers for people and small businesses. One person, from the printer that won't print to the server behind your shop. Coding since 2018.
 
-tay on the internet, anarchist in the streets, bullshit in the terminal.
-
-software should be free (as in freedom). i don't monetize my code and i don't respect
-tools gated behind paywalls. privacy is a right. federation is a goal. self-hosting is the answer.
+[![tay.märz](https://img.shields.io/badge/tay.m%C3%A4rz-website-0f6b54?style=flat-square)](https://tay-maerz.vercel.app)
+[![hire me](https://img.shields.io/badge/hire-hire.taymaerz.de-2fb08c?style=flat-square)](https://hire.taymaerz.de)
+[![email](https://img.shields.io/badge/email-tay%40taymaerz.de-6e3410?style=flat-square)](mailto:tay@taymaerz.de)
+[![pronouns](https://img.shields.io/badge/pronouns-they%2Fthem-7088c6?style=flat-square)](https://pronouns.cc)
+[![discord](https://img.shields.io/badge/discord-notfound.sh-5865F2?style=flat-square&logo=discord&logoColor=white)](https://notfound.sh)
 
 ---
 
-### 🛠️ things i've built
+### 🧰 Client work
 
-| project | what it is |
+| | What | Built with |
+|---|---|---|
+| **[Zak Tag&Nacht](https://zakgoettingen.de)** | Pub website with live opening status, daily specials and table booking. Built on site. | HTML, CSS, JS |
+| **[Déjà Vu](https://dejavu-goe.de)** | The whole system behind a Göttingen bar: public site, staff back office, loyalty card, mini-games. Built on site. | Python, SQLite, PWA |
+| **[folio Papeterie](https://folio-papeterie.de)** | Shopfront for a stationery boutique open since 1985. No cookies, local fonts. | HTML, CSS, JS |
+| **[CSD Northeim](https://csdnom.taymaerz.de)** | Pride march website, bilingual, with an easy-language mode. | HTML, CSS, JS |
+| **[EasySystems](https://easysystems.dev)** | Developer since 2022: Discord bots on 22,000+ servers and the [client dashboard](https://dashboard.easythreads.dev). | TypeScript, OAuth |
+| **[Furverse](https://furverse.io)** | Core team: development, DevOps, servers and the website. | Linux, Docker, Next.js |
+
+> *"I can only recommend Tay for any collaboration, their experience and personality is a great addition for every team."*
+> **Niklas**, CEO, EasySystems
+
+### 🦊 Things I build and run
+
+| | |
 |---|---|
-| [**Foxledger**](https://github.com/taynotfound/foxledger) | 🦊 self-hosted personal finance - real bank sync, smart categorization, cash wallet & rules engine |
-| [**FridgeFox**](https://github.com/taynotfound/fridgefox) | dinner from whatever you've got - fridge-first recipe finder on real food APIs, installable PWA |
-| [**Humgry**](https://github.com/taynotfound/humgry) | meal tracker for people who forget to eat - real nutrition data, gentle reminders, a bit of gamification |
-| [**WeatherWeb**](https://github.com/taynotfound/weatherweb) | modern weather dashboard, minimal and mine, zero bullshit |
-| [**kima**](https://github.com/taynotfound/kima) | unified linux package manager - one wrapper to rule the distro chaos |
-| [**Shrynk**](https://github.com/taynotfound/Shrynk) | link shortener - small links, big impact |
-| [**BoykisserLinux**](https://github.com/taynotfound/BoykisserLinux) | 🏳️‍⚧️ the gay gimmick OS you'd actually main |
-| [**nixdots**](https://github.com/taynotfound/nixdots) | my nix dotfiles - declarative all the way down |
+| **[Zest](https://zest.taymaerz.de)** | Private search with instant answers. No tracking, no stored searches. |
+| **[Tomato](https://weather.taymaerz.de)** · [repo](https://github.com/taynotfound/WeatherWeb) | Weather with attitude: six sources, radar, air quality. |
+| **[SkyFox](https://skyfox.taymaerz.de)** · [repo](https://github.com/taynotfound/skyfox) | Open-source flight tracker for Android. No account. |
+| **[FoundList](https://github.com/taynotfound/FoundList)** | Calm todo app for ADHD and autistic brains. Android, offline. |
+| **[Humngry](https://humgry.vercel.app)** · [repo](https://github.com/taynotfound/Humgry) | Gentle meal reminders for people who forget to eat. |
+| **[promptrouter](https://github.com/taynotfound/promptrouter)** | Go CLI that keeps easy coding tasks on your own GPU and sends only hard ones to the cloud. |
+| **[Foxledger](https://github.com/taynotfound/foxledger)** | Self-hosted personal finance. |
+| **[kima](https://github.com/taynotfound/kima)** · [nixdots](https://github.com/taynotfound/nixdots) | One package manager wrapper for every distro · my Nix setup. |
+| **[Boykisser Linux](https://boykisser.taymaerz.de)** | A pink Debian spin I actually daily-drive. |
+
+### 🔐 I attack my own work first
+
+Before handing a client their booking and admin system, I pentested it like an attacker would, found a critical access-control hole and closed it before launch. [Read the write-up →](https://hire.taymaerz.de/#/security)
+
+### 🖥️ Homelab
+
+Proxmox at home with 11+ self-hosted services: Nextcloud, Vaultwarden, Gitea, Jellyfin, Immich, Paperless-ngx, Headscale, WireGuard, Uptime Kuma, ntfy and more.
+
+### ⚙️ Stack
+
+`Linux` `Proxmox` `Docker` `Caddy` `Nginx` `Active Directory` · `TypeScript` `JavaScript` `Python` `Go` `Kotlin` `PHP` `SQL` `Bash` · `Astro` `Next.js` `Jetpack Compose`
 
 ---
 
-### 📡 running in prod (homelab, 11+ services)
-
-```
-✦ Nextcloud     ✦ Vaultwarden    ✦ Gitea
-✦ Jellyfin      ✦ Immich         ✦ Uptime Kuma
-✦ Portainer     ✦ Paperless-ngx  ✦ Headscale
-✦ Wireguard     ✦ ntfy           + a few cursed ones
-```
-
-edge is [**cloudflared**](https://github.com/cloudflare/cloudflared) tunnels for now -
-though honestly i'd rather run something selfmade, and that itch will get scratched eventually.
-all self-hosted. none of your data. none of their clouds.
-
----
-
-### ⚙️ stack i live in
-
-`TypeScript` · `JavaScript` · `Python` · `Shell` · `CSS`
-docker all the way down. nginx when i want boring and reliable. arch btw (sort of).
-
----
-
-> *powered by spezi, spite, and a deep distrust of saas pricing*
-> 🦊 notfound.sh on discord
+<sub>Für Kundinnen und Kunden in Göttingen: <a href="https://tay-maerz.vercel.app">tay-maerz.vercel.app</a> · Websites ab 300 € · das erste Gespräch ist kostenlos.</sub>
